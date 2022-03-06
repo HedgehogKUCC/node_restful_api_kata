@@ -133,6 +133,9 @@ function requestListener(req, res) {
 const server = http.createServer(requestListener);
 
 server.listen(process.env.PORT || PORT, () => {
-  console.log(__dirname);
+  if (process.env.PORT) {
+    console.log(`Server running at https://guarded-brook-69905.herokuapp.com/`);
+    return;
+  }
   console.log(`Server running at http://localhost:${PORT}/`);
 });
