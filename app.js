@@ -133,5 +133,6 @@ function requestListener(req, res) {
 const server = http.createServer(requestListener);
 
 server.listen(process.env.PORT || PORT, () => {
+  console.log(process.env);
   console.log(`Server running at http://localhost:${PORT}/`);
 });
